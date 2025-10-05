@@ -27,19 +27,19 @@ const WhatIsAI = () => {
       icon: Brain,
       title: "Machine Learning",
       description: "AI systems that learn from data and improve over time without being explicitly programmed.",
-      color: "neon-cyan",
+      color: "tech-blue",
     },
     {
       icon: Cpu,
       title: "Neural Networks",
       description: "Computing systems inspired by biological neural networks that process complex patterns.",
-      color: "neon-violet",
+      color: "tech-purple",
     },
     {
       icon: MessageCircle,
       title: "Natural Language Processing",
       description: "AI that understands, interprets, and generates human language naturally.",
-      color: "neon-green",
+      color: "tech-green",
     },
   ];
 
@@ -49,7 +49,7 @@ const WhatIsAI = () => {
       
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 glow-text-cyan">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 glow-text-blue">
             What is Artificial Intelligence?
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -64,11 +64,10 @@ const WhatIsAI = () => {
             return (
               <div
                 key={index}
-                className="ai-card glass rounded-2xl p-6 lg:p-8 group hover:scale-105 transition-all duration-500 opacity-0"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="ai-card glass rounded-2xl p-6 lg:p-8 group hover:scale-105 transition-all duration-500"
               >
-                <div className={`mb-6 inline-flex p-4 rounded-xl bg-${concept.color}/10 group-hover:glow-${concept.color} transition-all duration-500`}>
-                  <Icon className={`h-10 w-10 lg:h-12 lg:w-12 text-${concept.color} group-hover:scale-110 transition-transform duration-500`} />
+                <div className="mb-6 inline-flex p-4 rounded-xl bg-card/50 group-hover:glow-blue transition-all duration-500">
+                  <Icon className="h-10 w-10 lg:h-12 lg:w-12 text-primary group-hover:scale-110 transition-transform duration-500" />
                 </div>
                 <h3 className="text-xl lg:text-2xl font-heading font-bold mb-4 text-foreground">
                   {concept.title}

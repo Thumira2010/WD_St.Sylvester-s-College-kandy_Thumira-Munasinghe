@@ -27,37 +27,31 @@ const Timeline = () => {
       year: "1956",
       title: "Birth of AI",
       description: "The term 'Artificial Intelligence' was coined at the Dartmouth Conference, marking the official beginning of AI as a field.",
-      color: "neon-cyan",
     },
     {
       year: "1997",
       title: "Deep Blue Wins",
       description: "IBM's Deep Blue defeated world chess champion Garry Kasparov, proving AI could outthink humans in complex games.",
-      color: "neon-violet",
     },
     {
       year: "2011",
       title: "Watson's Victory",
       description: "IBM Watson won Jeopardy!, demonstrating advanced natural language processing and knowledge retrieval.",
-      color: "neon-green",
     },
     {
       year: "2016",
       title: "AlphaGo Triumph",
       description: "Google's AlphaGo defeated world champion Lee Sedol in Go, showcasing the power of deep reinforcement learning.",
-      color: "neon-cyan",
     },
     {
       year: "2020",
       title: "AI Everywhere",
       description: "AI became integrated into daily life through virtual assistants, recommendation systems, and autonomous vehicles.",
-      color: "neon-violet",
     },
     {
       year: "2030",
       title: "The Future",
       description: "AI is predicted to revolutionize healthcare, education, and solve complex global challenges like climate change.",
-      color: "neon-green",
       future: true,
     },
   ];
@@ -87,10 +81,9 @@ const Timeline = () => {
             {events.map((event, index) => (
               <div
                 key={index}
-                className={`timeline-event opacity-0 relative ${
+                className={`timeline-event relative ${
                   index % 2 === 0 ? "md:text-right" : "md:text-left"
                 }`}
-                style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className={`md:w-1/2 ${index % 2 === 0 ? "md:pr-12 md:ml-auto" : "md:pl-12"} pl-16 md:pl-0`}>
                   <div className={`glass rounded-2xl p-6 lg:p-8 hover:scale-105 transition-all duration-500 ${event.future ? 'glow-green' : ''}`}>
@@ -98,7 +91,7 @@ const Timeline = () => {
                       {event.future && (
                         <Sparkles className="h-6 w-6 text-accent animate-pulse" />
                       )}
-                      <span className={`text-3xl lg:text-4xl font-heading font-bold text-${event.color}`}>
+                      <span className="text-3xl lg:text-4xl font-heading font-bold text-primary">
                         {event.year}
                       </span>
                     </div>
@@ -112,7 +105,7 @@ const Timeline = () => {
                 </div>
 
                 {/* Timeline dot */}
-                <div className={`absolute top-8 left-8 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 rounded-full bg-${event.color} glow-${event.color} ${event.future ? 'animate-pulse-glow' : ''}`}></div>
+                <div className={`absolute top-8 left-8 md:left-1/2 md:transform md:-translate-x-1/2 w-4 h-4 rounded-full bg-primary glow-blue ${event.future ? 'animate-pulse-glow' : ''}`}></div>
               </div>
             ))}
           </div>

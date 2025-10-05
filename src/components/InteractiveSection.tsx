@@ -41,15 +41,15 @@ const InteractiveSection = () => {
       <div className="container mx-auto max-w-4xl relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
-            <span className="glow-text-cyan">Test Your </span>
-            <span className="glow-text-violet">Intelligence</span>
+            <span className="glow-text-blue">Test Your </span>
+            <span className="glow-text-purple">Intelligence</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
             Chat with an AI simulation and experience how intelligent systems communicate.
           </p>
         </div>
 
-        <div className="glass rounded-2xl overflow-hidden border-2 border-primary/20 glow-cyan">
+        <div className="glass rounded-2xl overflow-hidden border-2 border-primary/20 glow-blue">
           {/* Chat Header */}
           <div className="bg-card/50 backdrop-blur-sm border-b border-primary/20 p-4 flex items-center gap-3">
             <div className="p-2 rounded-full bg-primary/20">

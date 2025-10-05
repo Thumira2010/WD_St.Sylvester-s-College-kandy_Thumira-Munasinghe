@@ -57,10 +57,10 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        neon: {
-          cyan: "hsl(var(--neon-cyan))",
-          violet: "hsl(var(--neon-violet))",
-          green: "hsl(var(--neon-green))",
+        tech: {
+          blue: "hsl(var(--tech-blue))",
+          purple: "hsl(var(--tech-purple))",
+          green: "hsl(var(--tech-green))",
         },
       },
       fontFamily: {

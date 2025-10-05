@@ -35,7 +35,7 @@ const HeroSection = () => {
         this.vx = (Math.random() - 0.5) * 0.5;
         this.vy = (Math.random() - 0.5) * 0.5;
         this.radius = Math.random() * 2 + 1;
-        const colors = ["#00FFFF", "#8A2BE2", "#00FFB3"];
+        const colors = ["#0EA5E9", "#7C3AED", "#10B981"];
         this.color = colors[Math.floor(Math.random() * colors.length)];
       }
 
@@ -81,7 +81,7 @@ const HeroSection = () => {
 
           if (distance < 150) {
             ctx.beginPath();
-            ctx.strokeStyle = `rgba(0, 255, 255, ${0.2 * (1 - distance / 150)})`;
+            ctx.strokeStyle = `rgba(14, 165, 233, ${0.2 * (1 - distance / 150)})`;
             ctx.lineWidth = 0.5;
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
@@ -111,11 +111,11 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <canvas ref={canvasRef} className="absolute inset-0 z-0" />
       
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto animate-slide-up">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold mb-6 glow-text-cyan">
+      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-heading font-bold mb-6 glow-text-blue">
           Artificial Intelligence:
           <br />
-          <span className="glow-text-violet">Friend or Foe?</span>
+          <span className="glow-text-purple">Friend or Foe?</span>
         </h1>
         
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-8 md:mb-12 max-w-3xl mx-auto">
@@ -124,7 +124,7 @@ const HeroSection = () => {
         
         <Button
           onClick={scrollToNext}
-          className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg font-heading font-semibold rounded-full glow-cyan animate-pulse-glow transition-all duration-300 hover:scale-105"
+          className="bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-6 text-lg font-heading font-semibold rounded-full glow-blue transition-all duration-300 hover:scale-105"
         >
           Start Exploring
         </Button>

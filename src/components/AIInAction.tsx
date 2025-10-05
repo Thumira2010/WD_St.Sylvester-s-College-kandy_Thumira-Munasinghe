@@ -34,42 +34,36 @@ const AIInAction = () => {
       title: "Medicine",
       description: "AI helps doctors detect diseases faster and develop new treatments.",
       image: medicineImg,
-      color: "neon-cyan",
     },
     {
       icon: GraduationCap,
       title: "Education",
       description: "Smart tutoring systems personalize learning for every student.",
       image: educationImg,
-      color: "neon-green",
     },
     {
       icon: Palette,
       title: "Art",
       description: "AI creates beautiful paintings, music, and creative content.",
       image: artImg,
-      color: "neon-violet",
     },
     {
       icon: Bot,
       title: "Robotics",
       description: "Intelligent machines that think, learn, and work autonomously.",
       image: roboticsImg,
-      color: "neon-cyan",
     },
     {
       icon: Globe,
       title: "Environment",
       description: "AI predicts and helps fight climate change and protect nature.",
       image: environmentImg,
-      color: "neon-green",
     },
     {
       icon: Briefcase,
       title: "Business",
       description: "Smart automation and analytics drive innovation and efficiency.",
       image: businessImg,
-      color: "neon-violet",
     },
   ];
 
@@ -77,7 +71,7 @@ const AIInAction = () => {
     <section id="ai-in-action" ref={sectionRef} className="py-20 md:py-32 px-4 relative">
       <div className="container mx-auto max-w-7xl relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 glow-text-violet">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 glow-text-purple">
             AI in Action: Changing the World
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -91,8 +85,7 @@ const AIInAction = () => {
             return (
               <div
                 key={index}
-                className="action-card glass rounded-2xl overflow-hidden group hover:scale-105 transition-all duration-500 opacity-0 cursor-pointer"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="action-card glass rounded-2xl overflow-hidden group hover:scale-105 transition-all duration-500 cursor-pointer"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -101,8 +94,8 @@ const AIInAction = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-80"></div>
-                  <div className={`absolute top-4 right-4 p-3 rounded-xl bg-background/80 backdrop-blur-sm group-hover:glow-${app.color} transition-all duration-500`}>
-                    <Icon className={`h-6 w-6 text-${app.color}`} />
+                  <div className="absolute top-4 right-4 p-3 rounded-xl bg-background/80 backdrop-blur-sm group-hover:glow-blue transition-all duration-500">
+                    <Icon className="h-6 w-6 text-primary" />
                   </div>
                 </div>
                 <div className="p-6">

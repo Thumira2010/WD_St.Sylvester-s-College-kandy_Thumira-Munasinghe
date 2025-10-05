@@ -7,14 +7,14 @@ const AboutSection = () => {
       
       <div className="container mx-auto max-w-4xl relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-6 glow-text-cyan">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold mb-6 glow-text-blue">
             About This Project
           </h2>
         </div>
 
-        <div className="glass rounded-2xl p-8 lg:p-12 mb-12 animate-slide-up">
+        <div className="glass rounded-2xl p-8 lg:p-12 mb-12">
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary via-secondary to-accent p-1 glow-cyan">
+            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary via-secondary to-accent p-1 glow-blue">
               <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
                 <Code className="h-16 w-16 text-primary" />
               </div>
@@ -37,7 +37,7 @@ const AboutSection = () => {
         </div>
 
         {/* Credits */}
-        <div className="glass rounded-2xl p-8 mb-12 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+        <div className="glass rounded-2xl p-8 mb-12">
           <h3 className="text-2xl font-heading font-bold mb-6 text-center text-foreground">
             Built With
           </h3>
