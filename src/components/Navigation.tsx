@@ -21,7 +21,6 @@ const Navigation = () => {
     { name: "Friend or Foe", href: "#friend-or-foe" },
     { name: "Timeline", href: "#timeline" },
     { name: "Interactive", href: "#interactive" },
-    { name: "About", href: "#about" },
   ];
 
   const scrollToSection = (href: string) => {

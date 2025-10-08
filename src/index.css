@@ -2,14 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
-    /* Sophisticated Dark Tech Theme */
-    --background: 222 47% 11%;
+    /* Color Palette */
+  --background: 220 45% 10%;
     --foreground: 210 40% 98%;
 
     --card: 222 47% 15%;
@@ -39,7 +35,6 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
 
-    /* Modern Tech Colors */
     --tech-blue: 199 89% 48%;
     --tech-purple: 262 83% 58%;
     --tech-green: 160 84% 39%;
@@ -50,7 +45,7 @@ All colors MUST be HSL.
     --glow-green: 0 0 20px hsl(160 84% 39% / 0.4);
     
     /* Gradients */
-    --gradient-tech: linear-gradient(135deg, hsl(199 89% 48%), hsl(262 83% 58%));
+    --gradient-tech: linear-gradient(135deg, hsl(199 89% 48% / 0.2), hsl(262 83% 58% / 0.2));
     --gradient-accent: linear-gradient(135deg, hsl(199 89% 48% / 0.2), hsl(262 83% 58% / 0.2));
     
     /* Animations */
@@ -89,45 +84,44 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  /* Glow Effects */
   .glow-blue {
-    box-shadow: 0 0 20px hsl(var(--tech-blue) / 0.4);
+    box-shadow: 0 0 12px hsl(var(--tech-blue) / 0.35);
   }
   
   .glow-purple {
-    box-shadow: 0 0 20px hsl(var(--tech-purple) / 0.4);
+    box-shadow: 0 0 12px hsl(var(--tech-purple) / 0.35);
   }
   
   .glow-green {
-    box-shadow: 0 0 20px hsl(var(--tech-green) / 0.4);
+    box-shadow: 0 0 12px hsl(var(--tech-green) / 0.35);
   }
 
   .glow-text-blue {
-    text-shadow: 0 0 10px hsl(var(--tech-blue) / 0.6), 0 0 20px hsl(var(--tech-blue) / 0.3);
+    text-shadow: 0 0 6px hsl(var(--tech-blue) / 0.55), 0 0 12px hsl(var(--tech-blue) / 0.25);
   }
 
   .glow-text-purple {
-    text-shadow: 0 0 10px hsl(var(--tech-purple) / 0.6), 0 0 20px hsl(var(--tech-purple) / 0.3);
+    text-shadow: 0 0 6px hsl(var(--tech-purple) / 0.55), 0 0 12px hsl(var(--tech-purple) / 0.25);
   }
 
   .glow-text-green {
-    text-shadow: 0 0 10px hsl(var(--tech-green) / 0.6), 0 0 20px hsl(var(--tech-green) / 0.3);
+    text-shadow: 0 0 6px hsl(var(--tech-green) / 0.55), 0 0 12px hsl(var(--tech-green) / 0.25);
   }
 
-  /* Glassmorphism */
+
   .glass {
     background: hsl(var(--card) / 0.6);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(8px);
     border: 1px solid hsl(var(--border) / 0.3);
   }
 
-  /* Animations */
+ 
   .animate-float {
     animation: float 3s ease-in-out infinite;
   }
 
   .animate-pulse-glow {
-    animation: pulse-glow 2s ease-in-out infinite;
+    animation: pulse-glow 2.2s ease-in-out infinite;
   }
 
   .animate-slide-up {
@@ -140,8 +134,8 @@ All colors MUST be HSL.
   }
 
   @keyframes pulse-glow {
-    0%, 100% { opacity: 1; box-shadow: 0 0 20px hsl(var(--primary) / 0.5); }
-    50% { opacity: 0.8; box-shadow: 0 0 30px hsl(var(--primary) / 0.8); }
+    0%, 100% { opacity: 1; box-shadow: 0 0 12px hsl(var(--primary) / 0.45); }
+    50% { opacity: 0.9; box-shadow: 0 0 18px hsl(var(--primary) / 0.6); }
   }
 
   @keyframes slide-up {
@@ -149,9 +143,9 @@ All colors MUST be HSL.
     to { opacity: 1; transform: translateY(0); }
   }
 
-  /* Interactive Elements */
+
   .interactive-card {
-    @apply transition-all duration-300 hover:scale-105 hover:glow-blue cursor-pointer;
+    @apply transition-transform duration-300 hover:scale-102 cursor-pointer;
   }
 
   .tech-border {
